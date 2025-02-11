@@ -16,6 +16,7 @@ const rendering = () => {
     button.innerText = "삭제";
     button.onclick = () => {
       list.splice(i, 1);
+      db.setItem("list", JSON.stringify(list));
       rendering();
     };
     const edit = document.createElement("button");
